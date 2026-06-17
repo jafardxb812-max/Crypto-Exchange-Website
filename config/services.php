@@ -35,4 +35,8 @@ return [
         ],
     ],
 
+    'bscscan' => [
+        'key' => env('BSCSCAN_API_KEY', 'YourApiKeyToken'),
+    ],
+
 ];
