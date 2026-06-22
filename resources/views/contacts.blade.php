@@ -25,6 +25,7 @@
         <nav class="main-nav" id="main-nav">
             <ul class="nav__links">
                 <li><a href="/exchange">Exchange</a></li>
+                <li><a href="/transaction">Transaction</a></li>
                 <li><a href="/faq">FAQ</a></li>
                 <li><a href="/agreement">Agreement</a></li>
                 <li><a href="/contacts" class="active">Contacts</a></li>
