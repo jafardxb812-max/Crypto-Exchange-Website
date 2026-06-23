@@ -1,0 +1,15 @@
+{
+  "name": "binance-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server — Binance real-time price, stats, order book, paper trading",
+  "type": "module",
+  "main": "index.mjs",
+  "scripts": {
+    "start": "node index.mjs",
+    "install-deps": "npm install"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "ws": "^8.18.0"
+  }
+}
