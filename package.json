@@ -9,7 +9,9 @@
         "deploy:testnet": "hardhat run scripts/deploy.js --network bscTestnet",
         "deploy:mainnet": "hardhat run scripts/deploy.js --network bsc",
         "liquidity:testnet": "hardhat run scripts/addLiquidity.js --network bscTestnet",
-        "liquidity:mainnet": "hardhat run scripts/addLiquidity.js --network bsc"
+        "liquidity:mainnet": "hardhat run scripts/addLiquidity.js --network bsc",
+        "price:testnet": "hardhat run scripts/marketPrice.js --network bscTestnet",
+        "price:mainnet": "hardhat run scripts/marketPrice.js --network bsc"
     },
     "devDependencies": {
         "@nomicfoundation/hardhat-toolbox": "^5.0.0",
