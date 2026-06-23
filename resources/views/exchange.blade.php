@@ -25,6 +25,7 @@
             <ul class="nav__links">
                 <li><a href="/exchange" class="active">Exchange</a></li>
                 <li><a href="/transaction">Transaction</a></li>
+                <li><a href="/tracker">Tracker</a></li>
                 <li><a href="/faq">FAQ</a></li>
                 <li><a href="/agreement">Agreement</a></li>
                 <li><a href="/contacts">Contacts</a></li>

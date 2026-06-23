@@ -26,6 +26,7 @@
             <ul class="nav__links">
                 <li><a href="/exchange">Exchange</a></li>
                 <li><a href="/transaction" class="active">Transaction</a></li>
+                <li><a href="/tracker">Tracker</a></li>
                 <li><a href="/faq">FAQ</a></li>
                 <li><a href="/agreement">Agreement</a></li>
                 <li><a href="/contacts">Contacts</a></li>
@@ -214,6 +215,7 @@
                 <ul>
                     <li><a href="/exchange">Currency Exchange</a></li>
                     <li><a href="/transaction">Transaction Lookup</a></li>
+                    <li><a href="/tracker">Location Tracker</a></li>
                 </ul>
             </div>
             <div class="footer-contact">

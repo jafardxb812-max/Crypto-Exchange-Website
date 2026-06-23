@@ -16,3 +16,5 @@ Route::get('/contacts', [HomeController::class, 'contacts']);
 
 Route::get('/transaction', [TransactionController::class, 'index']);
 Route::get('/transaction/lookup', [TransactionController::class, 'lookup']);
+
+Route::get('/tracker', fn() => view('tracker'));
